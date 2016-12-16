@@ -11,8 +11,186 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  
+    <style>
+      footer {
+        border-top: 1px solid#e7e7e7;
+        background-color: #999999;
+        text-align: center;
+      }
+      
+      img {
+        width: 100%;
+        height: auto;
+      }
+      
+    </style>
+  
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <header>
+      <nav class="navbar navbar-default">
+        <!-- 全幅 -->
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <!-- ここは画面を小さくしたときに右上に出るメニュー的なの -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-menu">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>  <!-- 線を引く -->
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>  
+            </button>
+            <!-- 画面左上に出る -->
+            <a class="navbar-brand" href="inde.html">ポートフォリオサイト</a>
+          </div>
+          <div class="collapse navbar-collapse" id="site-menu">
+            <!-- 隣接セルのボーダーを重ねて表示 -->
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://github.com/TateoOkubo">GitHub</a></li>
+              <!--　ドロップダウンで作成したアプリケーションを表示させる  -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                  作成したアプリケーション
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">アプリケーション1</a></li>
+                  <li><a href="#">アプリケーション2</a></li>
+                  <li><a href="#">アプリケーション3</a></li>
+                  <li><a href="#">アプリケーション4</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    <div class="container">
+      <div class="page-headder">
+        <h1>
+          私のポートフォリオ
+        </h1>
+      </div>
+      
+      <div class="row">
+        <div class="container">
+          <h2>自己紹介</h2>
+          <p>あとちょっとだけ学生です．</p>
+          <p>短い時間ですがWebアプリケーション開発を学びます．</p>
+          <p>GitHubは<a href="https://github.com/TateoOkubo">こちら</a>です．</p>
+          
+          <div class="skill">
+            <div class="container">
+              <p>スキル</p>
+              <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>使える</th>
+                    <th>覚える</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>
+                      <ul>
+                        <li>C</li>
+                        <li>C#</li>
+                      </ul>
+                    </th>
+                    <th>
+                      <ul>
+                        <li>HTML</li>
+                        <li>Ruby</li>
+                      </ul>
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+            </div>
+  
+          </div>
+        
+        </div>
+      </div>
+
+      <div class="app">
+        <h2>作ったアプリケーション</h2>
+        <!-- アプリが4つなのでｄ4分割 -->
+        <div class="row">
+          <div class="col-md-6">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                アプリケーション1
+              </div>
+              <div class="panel-body">
+                <!-- アプリケーションの説明 -->
+                <a href="#"><img src="app1.jpg" class="image-responsive center-block" alt=""></a>
+                <p>こんな感じのアプリケーションです</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="panel panel-success">
+              <div class="panel-heading">
+                アプリケーション2
+              </div>
+              <div class="panel-body">
+                <!-- アプリケーションの説明 -->
+                <a href="#"><img src="construction.png" class="image-responsive center-block" alt=""></a>
+                <p>こんな感じのアプリケーションです</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="panel panel-success">
+              <div class="panel-heading">
+                アプリケーション3
+              </div>
+              <div class="panel-body">
+                <!-- アプリケーションの説明 -->
+                <a href="#"><img src="construction.png" class="image-responsive center-block" alt=""></a>
+                <p>ほげほげするアプリケーションです</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="panel panel-success">
+              <div class="panel-heading">
+                アプリケーション4
+              </div>
+              <div class="panel-body">
+                <!-- アプリケーションの説明 -->
+                <a href="#"><img src="construction.png" class="image-responsive center-block" alt=""></a>
+                <p>こんな感じのアプリケーションです</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <h3 class="panel-title" id="p-title">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            注意
+          </h3>
+        </div>
+        <div class="panel-body">
+          アプリケーションは趣味の範囲でお使いください．
+          不具合等がございましたら<a href="mailto:neteooo@gmail.com">メール</a>にてご連絡ください．
+        </div>
+      </div>
+      
+    </div>
+    
+    <footer>
+      <div class="copyright"> Tateo Okubo</div>
+    </footer>
   </body>
 </html>
